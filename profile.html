@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Edit Profile</title>
+        <link rel="stylesheet" href="purechord.css">
+        <meta charset="UTF-8">
+        <meta name="Pure Chord" content="A music webpage">
+        <meta name="keywords" content="music, songs, pop, Fujii Kaze, keshi, Joji, Taylor Swift, Monsta X, Nf, Dean Lewis, Clinton Kane, Katy Perry, Daniel Caesar">     
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav class="nav1">
+            <ul>
+                <li><a href="discovery.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="library.html">Library</a>
+                    <ul>
+                    <li><a href="playlist.html">Liked Songs</a></li>
+                    <li><a href="downloaded.html">Downloaded Songs</a></li>
+                    </ul>
+                </li>
+                <li><a href="setting.html">Setting</a>
+                    <ul>
+                    <li><a href="notification.html">Notifications</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    </ul>
+                </li>
+                <li><a href="profile.html">Profile</a>
+                    <ul>
+                    <li><a href="index.html">Login</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="defaultBG">
+            <h3>Edit Profile</h3>
+            
+            <div id="profileContainer">
+                <div id="profileImage" class="profile-button"></div>
+                <p id="name"></p>
+                <p id="editedName"></p>
+
+                <div id="edit">
+                    <input type="text" id="editNameInput">
+                    <button id="saveNameButton">Save</button>
+                </div>
+                <button id="editNameButton">Edit Name</button>
+            </div>
+        </div>
+        <div class="footer-container">
+            <footer>Copyright (c) 2023 PureChord All rights reserved.</footer>
+        </div>
+        <script>
+            // Function to handle changing the profile picture
+            function changeProfilePicture() {
+                // Code to change the profile picture logic goes here
+                // For example:
+                document.getElementById("profileImage").style.backgroundImage = 'url("new_profile.png")';
+            }
+
+            // Function to handle editing the name
+            function editName() {
+                // Show the name input field and save button
+                document.getElementById("editNameInput").style.display = "block";
+                document.getElementById("saveNameButton").style.display = "block";
+                // Hide the name text and edit button
+                document.getElementById("name").style.display = "none";
+                document.getElementById("editNameButton").style.display = "none";
+            }
+
+            // Function to save the edited name
+            function saveName() {
+        // Get the new name from the input field
+                var newName = document.getElementById("editNameInput").value;
+
+        // Update the name text
+                document.getElementById("name").style.display = "none";
+                document.getElementById("editedName").textContent = newName;
+                document.getElementById("editedName").style.display = "block";
+    
+        // Hide the name input field and save button
+                document.getElementById("editNameInput").style.display = "none";
+                document.getElementById("saveNameButton").style.display = "none";
+
+        // Show the updated name text and edit button
+                document.getElementById("editedName").style.display = "block";
+                document.getElementById("editNameButton").style.display = "block";
+            }
+
+
+            // Attach event listeners to the relevant elements
+            document.getElementById("editNameButton").addEventListener("click", editName);
+            document.getElementById("saveNameButton").addEventListener("click", saveName);
+        </script>
+    </body>
+</html>

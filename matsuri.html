@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Music Player</title>
+        <link rel="stylesheet" href="purechord.css">
+        <meta charset="UTF-8">
+        <meta name="Pure Chord" content="A music webpage">
+        <meta name="keywords" content="music, songs, pop, Fujii Kaze, keshi, Joji, Taylor Swift, Monsta X, Nf, Dean Lewis, Clinton Kane, Katy Perry, Daniel Caesar">     
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <nav class="nav1">
+            <ul>
+                <li><a href="discovery.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="library.html">Library</a>
+                    <ul>
+                        <li><a href="playlist.html">Liked Songs</a></li>
+                        <li><a href="downloaded.html">Downloaded Songs</a></li>
+                    </ul>
+                </li>
+                <li><a href="setting.html">Setting</a>
+                    <ul>
+                        <li><a href="languages.html">Languages</a></li>
+                        <li><a href="notification.html">Notifications</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                    </ul>
+                </li>
+                <li><a href="profile.html">Profile</a>
+                    <ul>
+                        <li><a href="index.html">Login</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                    </ul>
+                </li>
+            </ul> 
+        </nav>
+    <div class="album">
+        <img src="loveallserveall.jpg" alt="Lasa">
+        <div class="song-info">
+            <ul>
+                <li class="songTitle">Matsuri</li>
+                <li class="artistName">Fujii Kaze</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="audio-container">
+        <div id="previous-controls">
+            <button id="previous-button">
+                <img src="previous-button.png" alt="Previous">
+            </button>
+        </div>
+        <audio id="audio-player" controls >
+            <source src="FujiiKaze-まつり(Matsuri).mp3" type="audio/mpeg">
+        </audio>
+        <div id="next-controls">
+            <button id="next-button">
+                <img src="next-button.png" alt="Next">
+            </button>
+        </div>
+    </div>
+    <div class="footer-container">
+        <footer>Copyright (c) 2023 PureChord All rights reserved.
+            <br>
+            Music by <span class=“artist”>Fujii Kaze.</span>
+            Album: <span class=“album”>Love All Serve All</span>
+            &copy; 2022 Fujii Kaze. All rights reserved.
+        </footer>
+    </div>
+    <script>
+        var nextButton = document.getElementById("next-button");
+
+        nextButton.addEventListener("click", function() {
+            window.location.href = "nightdancer.html";
+        });
+        var previousButton = document.getElementById("previous-button");
+
+        previousButton.addEventListener("click", function() {
+            window.location.href = "always-danielcaesar.html";
+        
+        });
+    </script>
+
+    </body>
+</html>
